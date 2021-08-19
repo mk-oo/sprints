@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+
+<h1>Hello world</h1>
+
+<!-- inputs-->
+<input id="num1" type="number">
+<input id="num2" type = "number">
+<button onclick="clac()" style="height: 20px; width: 35px;" ></button>
+<input type="number" id="result">
+
+
+</body>
+
+<script>
+    function clac(){
+        
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+        result = num1 + num2;
+        document.getElementById("result").value = result;
+    }
+</script>
+
+<html>
