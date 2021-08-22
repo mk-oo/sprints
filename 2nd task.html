@@ -28,7 +28,7 @@
 
         // Name
         var name = null;
-        while (name === null || name.length === 0 || name === ' ' || Boolean(name) === false) {
+        while (name === null || name.length === 0 || name.replace(/^\s+|\s+$/gm,'')== "" || Boolean(name) === false) {
 
             name = prompt("Please enter your name ?");
 
