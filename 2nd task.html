@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+
+    <h1>Hello to Our Horoscope</h1>
+
+
+    <h2 id="name"></h2>
+    <h3 id="password"></h3>
+    <p id="cm"></p>
+    <p id="cd"></p>
+
+    <h1 id="horo"></h1>
+
+
+    <button id="Horoscope" onclick=" Calc_horo(name)">Start Our Horoscope</button>
+
+
+</body>
+
+<script>
+    function Calc_horo(name) {
+
+
+        // Name
+        var name = null;
+        while (name === null || name.length === 0 || name === ' ' || Boolean(name) === false) {
+
+            name = prompt("Please enter your name ?");
+
+        }
+        document.getElementById("name").innerText = name;
+        console.log(name.length);
+
+
+        //**************************************************************//
+
+
+        // Password
+        var password = null;
+        var count = 1;
+        while (password != "123") {
+            password = prompt("Please enter your password ?");
+
+            if (count == 3) {
+                alert("you’ve entered wrong password 3 times")
+                count = 0;
+            }
+            count++;
+        }
+        document.getElementById("password").innerText = 'You entered the right password';
+
+
+
+        //**************************************************************//
+
+        // Birth Month 
+
+        var birthmonth = null;
+
+        while (typeof (birthmonth) !== Number && birthmonth < 1 || birthmonth > 12) {
+
+            birthmonth = prompt('Enter the correct Month')
+
+        }
+        document.getElementById("cm").innerText = 'correct month';
+
+        //**************************************************************//
+
+        // birthday
+        var birthday = null;
+        while (typeof (birthday) !== Number && birthday < 1 || birthday > 30) {
+
+            birthday = prompt('Enter the correct Day')
+
+        }
+        document.getElementById("cd").innerText = 'correct Day';
+
+
+//***************************************************************************************//
+
+
+        // consoles 
+
+
+        // console.log(name)
+        // console.log(password)
+        // console.log(birthmonth)
+        // console.log(birthday)
+
+
+
+        //*************************************************************************************//
+
+        // Horoscpe
+
+
+        if (birthmonth == 1 && birthday >= 20 || birthmonth == 2 && birthday <= 18) {
+            alert("Your Horoscope is Aquarius");
+            document.getElementById("horo").innerText = 'Aquarius';
+
+        }
+
+        if (birthmonth == 2 && birthday >= 19 || birthmonth == 3 && birthday <= 20) {
+            alert("Your Horoscope is Pisces");
+            document.getElementById("horo").innerText = 'Pisces';
+
+        }
+        if (birthmonth == 3 && birthday >= 21 || birthmonth == 4 && birthday <= 19) {
+            alert(" Your Horoscope is Aries");
+            document.getElementById("horo").innerText = 'Aries';
+
+
+        }
+
+        if (birthmonth == 4 && birthday >= 20 || birthmonth == 5 && birthday <= 20) {
+            alert(" Your Horoscope is Taurus");
+            document.getElementById("horo").innerText = 'Taurus';
+
+
+        }
+
+        if (birthmonth == 5 && birthday >= 21 || birthmonth == 6 && birthday <= 20) {
+            alert("Your Horoscope is Gemini");
+            document.getElementById("horo").innerText = 'Gemini';
+
+        }
+
+        if (birthmonth == 6 && birthday >= 21 || birthmonth == 7 && birthday <= 22) {
+            alert("Your Horoscope is Cancer");
+            document.getElementById("horo").innerText = 'Cancer';
+
+        }
+        if (birthmonth == 7 && birthday >= 23 || birthmonth == 8 && birthday <= 22) {
+            alert(" Your Horoscope is Leo");
+            document.getElementById("horo").innerText = 'Leo';
+
+        }
+        if (birthmonth == 8 && birthday >= 23 || birthmonth == 9 && birthday <= 22) {
+            alert(" Your Horoscope is Virgo");
+            document.getElementById("horo").innerText = 'Virgo';
+
+        }
+        if (birthmonth == 9 && birthday >= 23 || birthmonth == 10 && birthday <= 22) {
+            alert("Your Horoscope is Libra");
+            document.getElementById("horo").innerText = 'Libra';
+
+        }
+        if (birthmonth == 10 && birthday >= 23 || birthmonth == 11 && birthday <= 21) {
+            alert("Your Horoscope is Scorpio");
+            document.getElementById("horo").innerText = 'Scorpio';
+
+        }
+        if (birthmonth == 11 && birthday >= 22 || birthmonth == 12 && birthday <= 21) {
+            alert("Your Horoscope is Sagittarius");
+            document.getElementById("horo").innerText = 'Sagittarius';
+
+        }
+
+        if (birthmonth == 12 && birthday >= 22 || birthmonth == 1 && birthday <= 19) {
+
+            alert("Your Horoscope is Capricorn");
+            document.getElementById("horo").innerText = 'Capricon';
+
+
+        }
+
+
+
+
+
+    }
+</script>
+
+<html>
