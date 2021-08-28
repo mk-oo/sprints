@@ -6,91 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
     <style>
-        h1 {
 
-            text-align: center;
-
-        }
-
-        #join-btn {
-            background-color: #4CAF50;
-            /* Green */
-            border-radius: 25px;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-
-        }
-
-        #group-name-inp,
-        #name-inp {
-
-
-            background-color: rgb(209, 199, 199);
-            /* Green background */
-            border: 1px solid green;
-            /* Green border */
-            color: black;
-            /* White text */
-            padding: 10px 24px;
-            /* Some padding */
-            cursor: pointer;
-            /* Pointer/hand icon */
-            width: 30%;
-            /* Set a width if needed */
-            display: block;
-            /* Make the buttons appear below each other */
-
-            margin-left: 33%;
-            margin-top: 20px;
-
-        }
-
-        #join-btn {
-            display: block;
-            margin-left: 45%;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-
-        #second-screen {
-
-            border: 2px solid black;
-        }
-
-        #logout-btn {
-            background-color: red;
-            /* Green */
-            border-radius: 25px;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-            font-size: 16px;
-        }
-        #sendmsg-btn{
-
-            background-color: rgb(61, 61, 226);
-            /* Green */
-            border-radius: 25px;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-            font-size: 16px;
-
-
-        }
     </style>
 </head>
 
 <body>
+    <!-- div 1 -->
+
+
     <div id="first-screen" style="display: block;">
         <h1> My Chat Application</h1>
         <input type="text" name="" id="group-name-inp" placeholder="Type your group name">
@@ -98,7 +24,13 @@
         <button id="join-btn" onclick="join();"> Join group</button>
     </div>
 
+
+
+
     <br>
+
+    <!-- div 2 -->
+
 
     <div id="second-screen" style="display: none;">
 
@@ -106,16 +38,13 @@
         <button id="logout-btn" onclick="logout();">LogOut</button>
         <div id="chat-screen">
 
-            <p id="sender" style="text-align: right; border: 3px solid royalblue;">You: hi</p>
-            <p id="reciever" style="  border: 3px solid gray;">User1: hi</p>
+            <p id="sender">You: hi</p>
+            <p id="reciever">User1: hi</p>
 
-            <textarea name="" cols="30" rows="10"type="text" id="sendmsg-inp" placeholder="Message" style="display: inline; height: 50px; width: 700px; margin-left: 10vmax;"></textarea>
+            <textarea name="" cols="30" rows="10"type="text" id="sendmsg-inp" placeholder="Message" ></textarea>
 
-            <button id="sendmsg-btn" style="display: inline;  margin-bottom: 50px;">Send Message</button>
+            <button id="sendmsg-btn">Send Message</button>
             <div>Registration closes in <span id="time">01:00</span> seconds !</div>
-
-
-
         </div>
 
     </div>
