@@ -20,28 +20,29 @@ function getName(){
 
 
 // Timer to logout
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+// function startTimer(duration, display) {
+//     var timer = duration, minutes, seconds;
+//     setInterval(function () {
+//         minutes = parseInt(timer / 60, 10);
+//         seconds = parseInt(timer % 60, 10);
 
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+//         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent =  seconds;
+//         display.textContent =  seconds;
 
-        if (--timer < 0) {
-            logout();
+//         if (--timer < 0) {
+//             logout();
+//         }
+ 
 
-        }
-    }, 1000);
-}
+//     }, 1000);
+// }
 
-window.onload = function () {
-    var oneminute = 60 * 1,
-        display = document.querySelector('#time');
-    startTimer(oneminute, display);
-};
+// window.onload = function () {
+//     var oneminute = 60 * 1,
+//         display = document.querySelector('#time');
+//     startTimer(oneminute, display);
+// };
 
 
 
@@ -61,6 +62,11 @@ function subToPusherChannel() {
     //     **init pusher**
 
     // }
+}
+
+function storeLocalStrorage(){
+
+    console.log('local storage');
 }
 
 function logout() {
